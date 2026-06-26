@@ -66,24 +66,21 @@
                 </div>
             </div>
 
-            <!-- تم إضافة روابط المسار الجديد للقائمة -->
             <div class="hidden lg:flex items-center gap-6 text-sm font-medium light-mode-text">
                 <a href="#home" class="nav-link"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
                 <a href="#start" class="nav-link"><span class="lang-ar">البداية</span><span class="lang-en">Start</span></a>
                 <a href="#shahada" class="nav-link"><span class="lang-ar">الشهادة</span><span class="lang-en">Shahada</span></a>
                 <a href="#about" class="nav-link"><span class="lang-ar">عن الإسلام</span><span class="lang-en">About Islam</span></a>
                 <a href="#pillars" class="nav-link"><span class="lang-ar">الأركان</span><span class="lang-en">Pillars</span></a>
+                <a href="#quran" class="nav-link"><span class="lang-ar">القرآن</span><span class="lang-en">Quran</span></a>
             </div>
 
             <div class="flex items-center gap-4">
-                <button onclick="toggleLanguage()" 
-                        class="px-5 py-2.5 rounded-2xl glass text-sm font-medium hover:bg-black/5 dark:hover:bg-white/20 transition light-mode-text">
+                <button onclick="toggleLanguage()" class="px-5 py-2.5 rounded-2xl glass text-sm font-medium hover:bg-black/5 dark:hover:bg-white/20 transition light-mode-text">
                     <span class="lang-en">عربي</span>
                     <span class="lang-ar">English</span>
                 </button>
-                
-                <button onclick="toggleDarkMode()" 
-                        class="w-11 h-11 flex items-center justify-center rounded-2xl glass hover:bg-black/5 dark:hover:bg-white/20 transition text-xl">
+                <button onclick="toggleDarkMode()" class="w-11 h-11 flex items-center justify-center rounded-2xl glass hover:bg-black/5 dark:hover:bg-white/20 transition text-xl">
                     <span id="theme-icon">☀️</span>
                 </button>
             </div>
@@ -101,27 +98,21 @@
                     <span class="lang-en">in Islam</span>
                 </span>
             </h1>
-            
             <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-200 mb-10">
                 <span class="lang-en">A beautiful, simple and respectful guide to Islam for new Muslims and truth seekers.</span>
                 <span class="lang-ar">دليل جميل وبسيط ومحترم للإسلام موجه للمسلمين الجدد والباحثين عن الحقيقة.</span>
             </p>
-
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#start" 
-                   class="px-10 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-xl shadow-emerald-500/30">
+                <a href="#start" class="px-10 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full text-lg font-semibold transition-all duration-300 shadow-xl shadow-emerald-500/30">
                     <span class="lang-en">Begin Your Journey</span>
                     <span class="lang-ar">ابدأ رحلتك</span>
                 </a>
-                
-                <a href="#shahada" 
-                   class="px-10 py-4 glass text-white hover:bg-white/20 rounded-full text-lg font-medium transition-all">
-                    <span class="lang-en">The Shahada</span>
-                    <span class="lang-ar">الشهادة</span>
+                <a href="#quran" class="px-10 py-4 glass text-white hover:bg-white/20 rounded-full text-lg font-medium transition-all">
+                    <span class="lang-en">Read the Quran</span>
+                    <span class="lang-ar">اقرأ القرآن</span>
                 </a>
             </div>
         </div>
-
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
             <i class="fa-solid fa-chevron-down text-3xl text-emerald-300 opacity-80"></i>
         </div>
@@ -130,7 +121,7 @@
     <!-- Quick Access Cards -->
     <section class="max-w-7xl mx-auto px-6 py-20">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="glass rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 group">
+            <div class="glass rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 group cursor-pointer" onclick="document.getElementById('quran').scrollIntoView({behavior: 'smooth'})">
                 <div class="text-emerald-500 dark:text-emerald-400 text-5xl mb-6">📖</div>
                 <h3 class="text-2xl font-bold mb-3 light-mode-text lang-en">The Quran</h3>
                 <h3 class="text-2xl font-bold mb-3 light-mode-text lang-ar arabic">القرآن الكريم</h3>
@@ -146,21 +137,17 @@
                 <p class="text-gray-600 dark:text-gray-300 lang-ar">شرح مصور خطوة بخطوة للوضوء والصلاة.</p>
             </div>
 
-            <div class="glass rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 group">
+            <div class="glass rounded-3xl p-8 hover:-translate-y-2 transition-all duration-300 group cursor-pointer" onclick="document.getElementById('shahada').scrollIntoView({behavior: 'smooth'})">
                 <div class="text-emerald-500 dark:text-emerald-400 text-5xl mb-6">🌟</div>
                 <h3 class="text-2xl font-bold mb-3 light-mode-text lang-en">The Shahada</h3>
                 <h3 class="text-2xl font-bold mb-3 light-mode-text lang-ar arabic">الشهادة</h3>
                 <p class="text-gray-600 dark:text-gray-300 lang-en">Take your first step into Islam with guidance and support.</p>
                 <p class="text-gray-600 dark:text-gray-300 lang-ar">خطوتك الأولى في الإسلام مع الدعم والتوجيه.</p>
-                <a href="#shahada" class="mt-6 inline-flex items-center text-emerald-600 dark:text-emerald-400 font-medium">
-                    <span class="lang-ar">كيف أسلم؟ &larr;</span>
-                    <span class="lang-en">How to embrace? &rarr;</span>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- NEW 1: Start Here Section (ابدأ من هنا) -->
+    <!-- Start Here Section -->
     <section id="start" class="py-20 relative bg-emerald-50 dark:bg-emerald-950/20 border-y border-emerald-100 dark:border-white/5">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <div class="inline-block px-4 py-2 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full font-medium text-sm mb-4">
@@ -179,37 +166,30 @@
         </div>
     </section>
 
-    <!-- NEW 2: The Shahada Section (الشهادة) -->
+    <!-- The Shahada Section -->
     <section id="shahada" class="py-24 relative overflow-hidden">
-        <!-- الزخرفة الخلفية -->
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
-
         <div class="max-w-5xl mx-auto px-6">
             <div class="glass rounded-[3rem] p-10 md:p-16 text-center border-emerald-500/20 shadow-2xl relative z-10">
                 <h2 class="text-4xl md:text-5xl font-bold mb-8 text-emerald-600 dark:text-emerald-400">
                     <span class="lang-en">The Shahada</span>
                     <span class="lang-ar arabic">الشهادة</span>
                 </h2>
-                
                 <p class="text-xl mb-12 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                     <span class="lang-en">The key to embracing Islam is a simple, profound declaration of faith. It takes only a moment to say, but transforms a lifetime.</span>
                     <span class="lang-ar">مفتاح الدخول في الإسلام هو إعلان بسيط وعميق للإيمان. نطقها يستغرق لحظات، لكنها تغير مجرى الحياة بأكملها.</span>
                 </p>
-
                 <div class="bg-white/50 dark:bg-black/30 rounded-3xl p-8 mb-8 backdrop-blur-sm border border-white/20">
                     <h3 class="text-3xl md:text-5xl arabic text-emerald-600 dark:text-emerald-400 font-bold leading-relaxed mb-6">
                         "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰهُ<br>وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ ٱللَّٰهِ"
                     </h3>
-                    
                     <div class="space-y-4">
                         <p class="text-lg font-medium text-gray-700 dark:text-gray-200">
                             <span class="lang-en">Pronunciation: <br> <span class="text-emerald-600 dark:text-emerald-400">"Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadan rasulullah."</span></span>
                             <span class="lang-ar">طريقة النطق لغير الناطقين بالعربية: <br> <span class="text-emerald-600 dark:text-emerald-400" dir="ltr">"Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadan rasulullah."</span></span>
                         </p>
-                        
                         <div class="w-16 h-px bg-emerald-500/30 mx-auto"></div>
-                        
                         <p class="text-lg text-gray-600 dark:text-gray-400 italic">
                             <span class="lang-en">Translation: "I bear witness that there is no deity but Allah, and I bear witness that Muhammad is the messenger of Allah."</span>
                             <span class="lang-ar">الترجمة: "أشهد أن لا إله إلا الله، وأشهد أن محمداً رسول الله."</span>
@@ -220,7 +200,7 @@
         </div>
     </section>
 
-    <!-- The Essence of Islam (Who is Allah / Muhammad) - PREVIOUSLY ADDED -->
+    <!-- The Essence of Islam -->
     <section id="about" class="py-20 bg-gray-100/50 dark:bg-black/20 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -233,7 +213,6 @@
                     <span class="lang-ar arabic">جوهر الإسلام</span>
                 </h2>
             </div>
-
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="glass p-10 rounded-[2rem] relative overflow-hidden">
                     <div class="absolute -right-6 -top-6 text-9xl opacity-5 text-emerald-500 arabic">الله</div>
@@ -242,11 +221,10 @@
                         <span class="lang-ar arabic">من هو الله؟</span>
                     </h3>
                     <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
-                        <span class="lang-en">Allah is the proper name for the One True God. He is the Creator of the universe, the Sustainer, and the Most Merciful. In Islam, God has no partners, no equals, and no children. He is entirely unique and beyond human comprehension, yet closer to us than our jugular vein.</span>
-                        <span class="lang-ar arabic">الله هو الإله الواحد الأحد، خالق الكون، الرازق، والرحمن الرحيم. في الإسلام، الله ليس له شريك، ولا ند، ولا ولد. هو متفرد في جلاله وكماله، ورغم عظمته فهو أقرب إلينا من حبل الوريد.</span>
+                        <span class="lang-en">Allah is the proper name for the One True God. He is the Creator of the universe, the Sustainer, and the Most Merciful. In Islam, God has no partners, no equals, and no children.</span>
+                        <span class="lang-ar arabic">الله هو الإله الواحد الأحد، خالق الكون، الرازق، والرحمن الرحيم. في الإسلام، الله ليس له شريك، ولا ند، ولا ولد.</span>
                     </p>
                 </div>
-
                 <div class="glass p-10 rounded-[2rem] relative overflow-hidden">
                     <div class="absolute -left-6 -top-6 text-9xl opacity-5 text-emerald-500 arabic">محمد</div>
                     <h3 class="text-3xl font-bold mb-6 text-emerald-600 dark:text-emerald-400">
@@ -254,15 +232,15 @@
                         <span class="lang-ar arabic">من هو محمد ﷺ؟</span>
                     </h3>
                     <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
-                        <span class="lang-en">Muhammad (peace be upon him) is the final prophet and messenger sent by God to humanity. He is not divine, but a human being chosen to deliver the Quran. He is a role model of compassion, honesty, and perfect moral character for all of mankind.</span>
-                        <span class="lang-ar arabic">محمد (صلى الله عليه وسلم) هو خاتم الأنبياء والمرسلين المبعوث رحمة للعالمين. هو بشر اختاره الله ليبلغ رسالة القرآن الكريم. ويُعد القدوة الحسنة والمثل الأعلى في الرحمة، والصدق، والأخلاق الكريمة للبشرية جمعاء.</span>
+                        <span class="lang-en">Muhammad (peace be upon him) is the final prophet and messenger sent by God to humanity. He is a role model of compassion, honesty, and perfect moral character.</span>
+                        <span class="lang-ar arabic">محمد (صلى الله عليه وسلم) هو خاتم الأنبياء والمرسلين المبعوث رحمة للعالمين. ويُعد القدوة الحسنة والمثل الأعلى في الرحمة والصدق.</span>
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pillars of Islam - PREVIOUSLY ADDED -->
+    <!-- Pillars of Islam -->
     <section id="pillars" class="py-20">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -271,67 +249,89 @@
                     <span class="lang-ar arabic">أركان الإسلام الخمسة</span>
                 </h2>
                 <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-                    <span class="lang-en">These are the foundation of a Muslim's life, shaping their faith and daily actions.</span>
-                    <span class="lang-ar">هذه الأركان هي الأساس الذي يُبنى عليه دين المسلم، وتشكل إيمانه وأفعاله اليومية.</span>
+                    <span class="lang-en">These are the foundation of a Muslim's life.</span>
+                    <span class="lang-ar">هذه الأركان هي الأساس الذي يُبنى عليه دين المسلم.</span>
                 </p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 <div class="glass p-6 rounded-3xl text-center hover:bg-emerald-500/10 transition duration-300">
                     <div class="w-16 h-16 mx-auto bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-2xl mb-4">☝️</div>
-                    <h4 class="font-bold text-xl mb-2 light-mode-text">
-                        <span class="lang-en">Shahada</span>
-                        <span class="lang-ar arabic">الشهادتان</span>
-                    </h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                        <span class="lang-en">Declaration of Faith</span>
-                        <span class="lang-ar">إعلان الإيمان</span>
-                    </p>
+                    <h4 class="font-bold text-xl mb-2 light-mode-text"><span class="lang-en">Shahada</span><span class="lang-ar arabic">الشهادتان</span></h4>
                 </div>
                 <div class="glass p-6 rounded-3xl text-center hover:bg-emerald-500/10 transition duration-300">
                     <div class="w-16 h-16 mx-auto bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-2xl mb-4">🤲</div>
-                    <h4 class="font-bold text-xl mb-2 light-mode-text">
-                        <span class="lang-en">Salah</span>
-                        <span class="lang-ar arabic">الصلاة</span>
-                    </h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                        <span class="lang-en">5 Daily Prayers</span>
-                        <span class="lang-ar">الصلوات الخمس المكتوبة</span>
-                    </p>
+                    <h4 class="font-bold text-xl mb-2 light-mode-text"><span class="lang-en">Salah</span><span class="lang-ar arabic">الصلاة</span></h4>
                 </div>
                 <div class="glass p-6 rounded-3xl text-center hover:bg-emerald-500/10 transition duration-300">
                     <div class="w-16 h-16 mx-auto bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-2xl mb-4">🪙</div>
-                    <h4 class="font-bold text-xl mb-2 light-mode-text">
-                        <span class="lang-en">Zakat</span>
-                        <span class="lang-ar arabic">الزكاة</span>
-                    </h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                        <span class="lang-en">Charity to the Needy</span>
-                        <span class="lang-ar">الصدقة الواجبة للمحتاجين</span>
-                    </p>
+                    <h4 class="font-bold text-xl mb-2 light-mode-text"><span class="lang-en">Zakat</span><span class="lang-ar arabic">الزكاة</span></h4>
                 </div>
                 <div class="glass p-6 rounded-3xl text-center hover:bg-emerald-500/10 transition duration-300">
                     <div class="w-16 h-16 mx-auto bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-2xl mb-4">🌙</div>
-                    <h4 class="font-bold text-xl mb-2 light-mode-text">
-                        <span class="lang-en">Sawm</span>
-                        <span class="lang-ar arabic">الصوم</span>
-                    </h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                        <span class="lang-en">Fasting in Ramadan</span>
-                        <span class="lang-ar">صيام شهر رمضان</span>
-                    </p>
+                    <h4 class="font-bold text-xl mb-2 light-mode-text"><span class="lang-en">Sawm</span><span class="lang-ar arabic">الصوم</span></h4>
                 </div>
                 <div class="glass p-6 rounded-3xl text-center hover:bg-emerald-500/10 transition duration-300">
                     <div class="w-16 h-16 mx-auto bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-2xl mb-4">🕋</div>
-                    <h4 class="font-bold text-xl mb-2 light-mode-text">
-                        <span class="lang-en">Hajj</span>
-                        <span class="lang-ar arabic">الحج</span>
-                    </h4>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                        <span class="lang-en">Pilgrimage to Makkah</span>
-                        <span class="lang-ar">الحج إلى مكة المكرمة</span>
-                    </p>
+                    <h4 class="font-bold text-xl mb-2 light-mode-text"><span class="lang-en">Hajj</span><span class="lang-ar arabic">الحج</span></h4>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVISED: The Holy Quran Section (PDF Version) -->
+    <section id="quran" class="py-24 relative bg-emerald-50/50 dark:bg-emerald-950/10 border-y border-emerald-100 dark:border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Quran Header -->
+            <div class="text-center mb-12">
+                <div class="inline-block px-4 py-2 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full font-medium text-sm mb-4">
+                    <span class="lang-en">The Holy Book</span>
+                    <span class="lang-ar">الكتاب المقدس</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold light-mode-text mb-6">
+                    <span class="lang-en">The Holy Quran</span>
+                    <span class="lang-ar arabic">القرآن الكريم</span>
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    <span class="lang-en">Read our clear, approved English translation. (Interactive features coming soon)</span>
+                    <span class="lang-ar">اقرأ الترجمة الإنجليزية المعتمدة بوضوح. (الميزات التفاعلية قادمة قريباً)</span>
+                </p>
+            </div>
+
+            <!-- Content Container (Designed to scale for future API/Grid injection) -->
+            <div id="quran-content-container" class="glass rounded-[2.5rem] p-4 md:p-8 border-emerald-500/30 relative shadow-2xl h-[75vh] min-h-[600px] flex flex-col">
+                
+                <!-- Action Bar for PDF -->
+                <div class="flex justify-between items-center mb-6 px-2">
+                    <h3 class="font-bold text-lg text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span class="lang-en">Approved English Translation</span>
+                        <span class="lang-ar">الترجمة الإنجليزية المعتمدة</span>
+                    </h3>
+                    
+                    <!-- ضع رابط الـ PDF الخاص بك في خاصية href أدناه -->
+                    <a href="YOUR_PDF_FILE.pdf" target="_blank" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl text-sm font-medium transition shadow-lg shadow-emerald-500/30 flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i>
+                        <span class="lang-en">Download PDF</span>
+                        <span class="lang-ar">تحميل الملف</span>
+                    </a>
+                </div>
+
+                <!-- PDF Viewer Area -->
+                <div class="w-full flex-1 rounded-2xl overflow-hidden bg-white/50 dark:bg-black/40 border border-emerald-500/10">
+                    <!-- استبدل YOUR_PDF_FILE.pdf برابط الملف الحقيقي -->
+                    <iframe src="YOUR_PDF_FILE.pdf" class="w-full h-full" frameborder="0">
+                        <div class="flex flex-col items-center justify-center h-full p-8 text-center text-gray-500 dark:text-gray-400">
+                            <i class="fa-solid fa-file-pdf text-4xl mb-4 text-emerald-400"></i>
+                            <p class="lang-en">Your browser does not support embedded PDFs. Please download it instead.</p>
+                            <p class="lang-ar mt-2">متصفحك لا يدعم عرض ملفات الـ PDF. يرجى تحميله مباشرة.</p>
+                        </div>
+                    </iframe>
+                </div>
+                
+                <!-- Future Placeholder Note (Invisible in UI) -->
+                <!-- Developer Note: Replace the div above with the Grid/API logic when ready. The container #quran-content-container will hold the structure perfectly. -->
+                
             </div>
         </div>
     </section>
@@ -343,7 +343,6 @@
                 <span class="lang-en">Common Questions</span>
                 <span class="lang-ar arabic">أسئلة شائعة</span>
             </h2>
-            
             <div class="space-y-6">
                 <div class="glass rounded-3xl p-7 hover:border-emerald-500/50 transition-colors">
                     <h3 class="font-bold text-xl mb-3 text-emerald-600 dark:text-emerald-400 flex items-center gap-3">
@@ -356,23 +355,11 @@
                         <span class="lang-ar arabic">"أشهد أن لا إله إلا الله، وأشهد أن محمداً رسول الله."</span>
                     </p>
                 </div>
-                
-                <div class="glass rounded-3xl p-7 hover:border-emerald-500/50 transition-colors">
-                    <h3 class="font-bold text-xl mb-3 text-emerald-600 dark:text-emerald-400 flex items-center gap-3">
-                        <i class="fa-solid fa-circle-question text-lg"></i>
-                        <span class="lang-en">Do I need to change my name to become Muslim?</span>
-                        <span class="lang-ar arabic">هل يجب أن أغير اسمي لأصبح مسلماً؟</span>
-                    </h3>
-                    <p class="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                        <span class="lang-en">No, changing your name is not required unless your current name has a bad meaning or contradicts Islamic beliefs.</span>
-                        <span class="lang-ar arabic">لا، تغيير الاسم ليس شرطاً إلا إذا كان يحمل معنى سيئاً أو يتعارض مع العقيدة الإسلامية.</span>
-                    </p>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Simple -->
+    <!-- Footer -->
     <footer class="py-8 text-center text-gray-500 border-t border-gray-200 dark:border-white/10 mt-10">
         <p>
             <span class="lang-en">© 2026 Islam Noor. Peace be upon you.</span>
