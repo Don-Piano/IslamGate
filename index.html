@@ -3,79 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="نور - دليل جميل ومحترم لاستكشاف الإسلام للمسلمين الجدد والباحثين عن الحقيقة">
+    <meta name="description" content="نور - دليل هادئ وموثوق لاستكشاف الإسلام">
     <title>نور | Islam Noor</title>
-    
-    <!-- Production CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
-    <!-- SEO & Accessibility -->
-    <meta property="og:title" content="نور | Islam Noor">
-    <meta property="og:description" content="اكتشف الإسلام بطريقة هادئة وجميلة">
 </head>
-<body class="bg-slate-950 text-slate-200" id="body">
+<body class="min-h-screen">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-slate-900/80 backdrop-blur-xl z-50 border-b border-slate-700">
+    <nav class="fixed top-0 left-0 right-0 glass z-50 border-b border-slate-700">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <!-- شعار احترافي بسيط -->
-                <div class="w-10 h-10 border-2 border-emerald-500 rounded-2xl flex items-center justify-center text-2xl font-light">ن</div>
-                <div class="font-bold text-3xl tracking-tighter text-white">نور</div>
+                <div class="w-9 h-9 border-2 border-emerald-500 rounded-2xl flex items-center justify-center text-xl font-light text-emerald-400">ن</div>
+                <span class="text-3xl font-semibold tracking-tight">نور</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#explore" class="hover:text-emerald-400 transition-colors">استكشف</a>
+                <a href="quran.html" class="hover:text-emerald-400 transition-colors">القرآن</a>
+                <a href="#start" class="hover:text-emerald-400 transition-colors">ابدأ من هنا</a>
             </div>
 
-            <div class="hidden md:flex items-center gap-8 text-sm">
-                <a href="#explore" class="hover:text-emerald-400 transition">استكشف الإسلام</a>
-                <a href="quran.html" class="hover:text-emerald-400 transition">القرآن</a>
-                <a href="#shahada" class="hover:text-emerald-400 transition">الشهادة</a>
-                <a href="new-muslim.html" class="hover:text-emerald-400 transition">المسلم الجديد</a>
-            </div>
-
-            <div class="flex items-center gap-4">
-                <button onclick="switchLanguage()" class="px-6 py-2.5 rounded-2xl bg-slate-800 hover:bg-slate-700 transition text-sm">EN / عربي</button>
-                <button onclick="toggleTheme()" class="w-10 h-10 rounded-2xl bg-slate-800 flex items-center justify-center text-xl">🌙</button>
+            <div class="flex items-center gap-3">
+                <button onclick="switchLanguage()" class="px-5 py-2.5 rounded-2xl glass text-sm hover:bg-slate-700 transition">EN / عربي</button>
+                <button onclick="toggleTheme()" class="w-10 h-10 rounded-2xl glass flex items-center justify-center">🌙</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-slate-950 to-slate-900">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-6" id="hero-title">
-                اكتشف جمال الإسلام
-            </h1>
-            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10" id="hero-subtitle">
-                دليل هادئ ومحترم للمسلمين الجدد ولكل باحث عن الحقيقة
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#explore" class="px-10 py-5 bg-emerald-600 hover:bg-emerald-500 rounded-3xl text-lg font-medium">ابدأ الاستكشاف</a>
-            </div>
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-slate-950 to-slate-900 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8" id="hero-title">اكتشف السلام الداخلي</h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12" id="hero-subtitle">دليل هادئ ومحترم يعتمد على القرآن الكريم والسنة الصحيحة</p>
+            <a href="#start" class="btn-primary px-10 py-5 rounded-3xl text-lg font-medium inline-block">ابدأ رحلتك الآن</a>
         </div>
     </section>
 
-    <!-- Explore Islam Section -->
+    <!-- Explore Section -->
     <section id="explore" class="py-24 bg-slate-900">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-16">استكشف الإسلام</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="explore-grid">
-                <!-- يتم ملؤها ديناميكيًا عبر JS -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="explore-grid">
+                <!-- Filled by JS with real content -->
             </div>
         </div>
     </section>
 
-    <!-- Question Section -->
-    <section class="py-24 bg-slate-950 border-t border-slate-800">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">لدي سؤال</h2>
-            <textarea id="question-input" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-3xl p-6 focus:outline-none focus:border-emerald-500" placeholder="اكتب سؤالك عن الإسلام..."></textarea>
-            <button onclick="answerQuestion()" class="mt-6 px-10 py-4 bg-emerald-600 hover:bg-emerald-500 rounded-3xl">احصل على الجواب</button>
-            <div id="answer-output" class="mt-8 text-left bg-slate-900 p-8 rounded-3xl hidden"></div>
-        </div>
-    </section>
-
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/components.js"></script>
     <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
