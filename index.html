@@ -305,15 +305,23 @@
                     </a>
                 </div>
 
-                <div class="w-full flex-1 rounded-2xl overflow-hidden bg-white/50 dark:bg-black/40 border border-emerald-500/10">
-                    <iframe src="https://drive.google.com/file/d/1a8KOjeeENFZ08U5aHRDNmTyczIwxs_kD/preview" class="w-full h-full" frameborder="0">
-                        <div class="flex flex-col items-center justify-center h-full p-8 text-center text-gray-500 dark:text-gray-400">
-                            <i class="fa-solid fa-file-pdf text-4xl mb-4 text-emerald-400"></i>
-                            <p class="lang-en">Your browser does not support embedded PDFs. Please download it instead.</p>
-                            <p class="lang-ar mt-2">متصفحك لا يدعم عرض ملفات الـ PDF. يرجى تحميله مباشرة.</p>
-                        </div>
-                    </iframe>
+                                <div class="w-full flex-1 flex flex-col items-center justify-center p-10 rounded-2xl bg-emerald-50/50 dark:bg-emerald-950/20 border-2 border-dashed border-emerald-500/30 text-center">
+                    <i class="fa-solid fa-file-pdf text-5xl text-emerald-500 mb-6"></i>
+                    <h4 class="text-xl font-bold mb-3 light-mode-text">
+                        <span class="lang-en">File is ready for download</span>
+                        <span class="lang-ar">الملف جاهز للتحميل</span>
+                    </h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-sm">
+                        <span class="lang-en">Due to the large file size, please click below to download it directly to your device.</span>
+                        <span class="lang-ar">نظراً لحجم الملف الكبير، يرجى الضغط أدناه لتحميل الملف مباشرة على جهازك.</span>
+                    </p>
+                    <a href="https://drive.google.com/uc?export=download&id=1a8KOjeeENFZ08U5aHRDNmTyczIwxs_kD" 
+                       class="px-8 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full font-semibold transition shadow-lg shadow-emerald-500/20">
+                        <span class="lang-en">Download PDF</span>
+                        <span class="lang-ar">تحميل الملف</span>
+                    </a>
                 </div>
+
                 
                 </div>
         </div>
