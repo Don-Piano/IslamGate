@@ -3,56 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="نور - دليل هادئ وموثوق لاستكشاف الإسلام">
     <title>نور | Islam Noor</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .arabic { font-family: 'Amiri', serif; }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1585036156171-384164a8c675?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .glass {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(16px);
+        }
+    </style>
 </head>
-<body class="min-h-screen">
+<body class="bg-slate-950 text-slate-100 min-h-screen">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 glass z-50 border-b border-slate-700">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <nav class="fixed top-0 w-full glass z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 border-2 border-emerald-500 rounded-2xl flex items-center justify-center text-xl font-light text-emerald-400">ن</div>
-                <span class="text-3xl font-semibold tracking-tight">نور</span>
+                <div class="w-9 h-9 border-2 border-emerald-400 rounded-2xl flex items-center justify-center text-2xl">🌙</div>
+                <span class="text-2xl font-bold">نور</span>
             </div>
-            
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#explore" class="hover:text-emerald-400 transition-colors">استكشف</a>
-                <a href="quran.html" class="hover:text-emerald-400 transition-colors">القرآن</a>
-                <a href="#start" class="hover:text-emerald-400 transition-colors">ابدأ من هنا</a>
-            </div>
-
-            <div class="flex items-center gap-3">
-                <button onclick="switchLanguage()" class="px-5 py-2.5 rounded-2xl glass text-sm hover:bg-slate-700 transition">EN / عربي</button>
-                <button onclick="toggleTheme()" class="w-10 h-10 rounded-2xl glass flex items-center justify-center">🌙</button>
-            </div>
+            <button onclick="toggleLanguage()" class="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-sm">
+                عربي / EN
+            </button>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-slate-950 to-slate-900 relative overflow-hidden">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8" id="hero-title">اكتشف السلام الداخلي</h1>
-            <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12" id="hero-subtitle">دليل هادئ ومحترم يعتمد على القرآن الكريم والسنة الصحيحة</p>
-            <a href="#start" class="btn-primary px-10 py-5 rounded-3xl text-lg font-medium inline-block">ابدأ رحلتك الآن</a>
-        </div>
-    </section>
-
-    <!-- Explore Section -->
-    <section id="explore" class="py-24 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-16">استكشف الإسلام</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="explore-grid">
-                <!-- Filled by JS with real content -->
+    <section class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 arabic">
+                اكتشف السلام الداخلي
+            </h1>
+            <p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10">
+                دليل هادئ ومحترم للإسلام يعتمد على القرآن الكريم والسنة الصحيحة
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#start" class="bg-emerald-600 hover:bg-emerald-500 px-8 py-4 rounded-3xl text-lg font-medium">
+                    ابدأ رحلتك الآن
+                </a>
             </div>
         </div>
     </section>
 
-    <script src="assets/js/components.js"></script>
-    <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script>
+        function toggleLanguage() {
+            const html = document.getElementById('html-tag');
+            if (html.dir === 'rtl') {
+                html.dir = 'ltr';
+                html.lang = 'en';
+            } else {
+                html.dir = 'rtl';
+                html.lang = 'ar';
+            }
+        }
+
+        // Tailwind script
+        tailwind.config = {
+            content: [],
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
 </body>
 </html>
