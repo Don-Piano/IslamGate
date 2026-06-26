@@ -1,125 +1,209 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" id="html-tag">
+<html lang="ar" dir="rtl" id="html-tag">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IslamGate | بوابة الإسلام</title>
+    <title>نور | Islam Noor - اكتشف الإسلام بجمال</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
     <style>
-        body { font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
-        html[dir="rtl"] body { font-family: 'Amiri', serif; }
-        html[dir="ltr"] .lang-ar { display: none; }
-        html[dir="rtl"] .lang-en { display: none; }
+        :root {
+            --primary: 16 185 129;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: all 0.4s ease;
+        }
+        .arabic {
+            font-family: 'Amiri', serif;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1585036156171-384164a8c675?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+            color: rgb(16 185 129);
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gradient-to-br from-slate-950 via-emerald-950 to-slate-950 text-white dark" id="body">
 
     <!-- Navbar -->
-    <nav class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <span class="font-bold text-2xl text-emerald-600">IslamGate</span>
-                <button onclick="toggleLanguage()" class="bg-emerald-100 text-emerald-800 px-4 py-2 rounded-md font-semibold hover:bg-emerald-200 transition">
+    <nav class="fixed top-0 w-full glass z-50 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 bg-emerald-500 rounded-2xl flex items-center justify-center text-3xl shadow-lg">ﷺ</div>
+                <div>
+                    <span class="text-3xl font-bold tracking-tighter">نور</span>
+                    <span class="text-emerald-400 text-sm block -mt-1">Islam Noor</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="nav-link">الرئيسية</a>
+                <a href="#quran" class="nav-link">القرآن</a>
+                <a href="#prayer" class="nav-link">تعلم الصلاة</a>
+                <a href="#shahada" class="nav-link">الشهادة</a>
+                <a href="#about" class="nav-link">عن الإسلام</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleLanguage()" 
+                        class="px-5 py-2.5 rounded-2xl glass text-sm font-medium hover:bg-white/20 transition">
                     <span class="lang-en">عربي</span>
                     <span class="lang-ar">English</span>
+                </button>
+                
+                <button onclick="toggleDarkMode()" 
+                        class="w-11 h-11 flex items-center justify-center rounded-2xl glass hover:bg-white/20 transition text-xl">
+                    <span id="theme-icon">☀️</span>
                 </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-emerald-700 overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="relative z-10 pb-8 bg-emerald-700 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32 lg:w-1/2 rtl:lg:w-full">
-                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 lg:mt-16 lg:px-8 xl:mt-28">
-                    <div class="sm:text-center lg:text-left rtl:lg:text-right">
-                        <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                            <span class="block lang-en">Welcome to</span>
-                            <span class="block lang-ar">مرحباً بك في</span>
-                            <span class="block text-emerald-300">IslamGate</span>
-                        </h1>
-                        <p class="mt-3 text-base text-emerald-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto lg:mx-0 md:mt-5 md:text-xl">
-                            <span class="lang-en">A comprehensive resource for Muslims, new Muslims, and anyone seeking to understand the beautiful religion of Islam.</span>
-                            <span class="lang-ar">مرجع شامل للمسلمين، والمسلمين الجدد، ولكل باحث عن فهم الدين الإسلامي العظيم.</span>
-                        </p>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start rtl:lg:justify-end">
-                            <a href="https://drive.google.com/file/d/1tBgC1SHTScTWB3f3f7dwqkOyQMxliYW-/view?usp=drivesdk" target="_blank" class="flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-emerald-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg">
-                                <span class="lang-en">Read Quran</span>
-                                <span class="lang-ar">تصفح القرآن</span>
-                            </a>
-                        </div>
-                    </div>
-                </main>
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20 relative">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                <span class="block lang-en text-white">Discover Peace</span>
+                <span class="block lang-ar arabic text-emerald-100">اكتشف السلام</span>
+                <span class="block text-emerald-400 mt-4">في الإسلام</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-emerald-100 mb-10">
+                <span class="lang-en">A beautiful, simple and respectful guide to Islam for new Muslims and truth seekers.</span>
+                <span class="lang-ar">دليل جميل وبسيط ومحترم للإسلام موجه للمسلمين الجدد والباحثين عن الحقيقة.</span>
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#start" 
+                   class="px-10 py-5 bg-emerald-600 hover:bg-emerald-500 rounded-3xl text-lg font-semibold transition-all duration-300 shadow-xl shadow-emerald-500/30">
+                    <span class="lang-en">Begin Your Journey</span>
+                    <span class="lang-ar">ابدأ رحلتك</span>
+                </a>
+                
+                <a href="#quran" 
+                   class="px-10 py-5 glass hover:bg-white/20 rounded-3xl text-lg font-medium transition-all">
+                    <span class="lang-en">Read the Quran</span>
+                    <span class="lang-ar">اقرأ القرآن</span>
+                </a>
             </div>
         </div>
-        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 rtl:lg:left-0 rtl:lg:right-auto">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full opacity-80" src="https://images.unsplash.com/photo-1585036156171-384164a8c675?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Islamic Architecture">
-        </div>
-    </div>
 
-    <!-- قسم الأسئلة الشائعة (FAQ) -->
-    <div class="py-12 bg-gray-100">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-10 text-emerald-800">
-                <span class="lang-en">Frequently Asked Questions</span>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-3xl text-emerald-300"></i>
+        </div>
+    </section>
+
+    <!-- Quick Access Cards -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="glass rounded-3xl p-8 hover:scale-105 transition-all duration-300 group">
+                <div class="text-emerald-400 text-5xl mb-6">📖</div>
+                <h3 class="text-2xl font-bold mb-3 lang-en">The Quran</h3>
+                <h3 class="text-2xl font-bold mb-3 lang-ar arabic">القرآن الكريم</h3>
+                <p class="text-gray-300 lang-en">Read, listen, and explore the Holy Quran with translations.</p>
+                <p class="text-gray-300 lang-ar">اقرأ واستمع وتأمل في كتاب الله مع الترجمات.</p>
+                <a href="#" class="mt-6 inline-flex items-center text-emerald-400 hover:text-emerald-300">ابدأ القراءة →</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass rounded-3xl p-8 hover:scale-105 transition-all duration-300 group">
+                <div class="text-emerald-400 text-5xl mb-6">🙏</div>
+                <h3 class="text-2xl font-bold mb-3 lang-en">Learn Prayer</h3>
+                <h3 class="text-2xl font-bold mb-3 lang-ar arabic">تعلم الصلاة</h3>
+                <p class="text-gray-300 lang-en">Step-by-step guide to Wudu and Salah with visuals.</p>
+                <p class="text-gray-300 lang-ar">شرح مصور خطوة بخطوة للوضوء والصلاة.</p>
+                <a href="#" class="mt-6 inline-flex items-center text-emerald-400 hover:text-emerald-300">ابدأ الآن →</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass rounded-3xl p-8 hover:scale-105 transition-all duration-300 group">
+                <div class="text-emerald-400 text-5xl mb-6">🌟</div>
+                <h3 class="text-2xl font-bold mb-3 lang-en">The Shahada</h3>
+                <h3 class="text-2xl font-bold mb-3 lang-ar arabic">الشهادة</h3>
+                <p class="text-gray-300 lang-en">Take your first step into Islam with guidance and support.</p>
+                <p class="text-gray-300 lang-ar">خطوتك الأولى في الإسلام مع الدعم والتوجيه.</p>
+                <a href="#" class="mt-6 inline-flex items-center text-emerald-400 hover:text-emerald-300">أشهد →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-black/30">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">
+                <span class="lang-en">Common Questions</span>
                 <span class="lang-ar">أسئلة شائعة</span>
             </h2>
+            
             <div class="space-y-6">
-                <!-- سؤال 1 -->
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-lg mb-2 text-emerald-700">
-                        <span class="lang-en">How to say the Shahada?</span>
+                <div class="glass rounded-3xl p-7">
+                    <h3 class="font-bold text-xl mb-3 text-emerald-300">
+                        <span class="lang-en">How do I say the Shahada?</span>
                         <span class="lang-ar">كيف أنطق الشهادة؟</span>
                     </h3>
-                    <p class="text-gray-600">
-                        <span class="lang-en">"Ash-hadu alla ilaha illallah, wa ash-hadu anna Muhammadan rasulullah."</span>
-                        <span class="lang-ar">"أشهد أن لا إله إلا الله، وأشهد أن محمداً رسول الله."</span>
-                    </p>
+                    <p class="text-lg leading-relaxed lang-en">"Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadan rasulullah."</p>
+                    <p class="text-lg leading-relaxed lang-ar arabic">"أشهد أن لا إله إلا الله، وأشهد أن محمداً رسول الله."</p>
                 </div>
-                <!-- سؤال 2 -->
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-lg mb-2 text-emerald-700">
-                        <span class="lang-en">How to perform Ghusl (Ritual Bath)?</span>
-                        <span class="lang-ar">كيف أغتسل (للطهارة)؟</span>
-                    </h3>
-                    <p class="text-gray-600">
-                        <span class="lang-en">Ensure water reaches every part of the body, starting with the intention and washing thoroughly.</span>
-                        <span class="lang-ar">تعميم الماء على جميع أعضاء الجسم مع النية، والتأكد من وصول الماء لكل جزء.</span>
-                    </p>
-                </div>
-                <!-- سؤال 3 -->
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-lg mb-2 text-emerald-700">
-                        <span class="lang-en">How to perform Wudu (Ablution)?</span>
-                        <span class="lang-ar">كيف أتوضأ؟</span>
-                    </h3>
-                    <p class="text-gray-600">
-                        <span class="lang-en">Washing hands, mouth, nose, face, arms, head, ears, and feet in a specific sequence.</span>
-                        <span class="lang-ar">غسل اليدين، المضمضة، الاستنشاق، غسل الوجه، الذراعين، مسح الرأس والأذنين، وغسل القدمين بالترتيب.</span>
-                    </p>
-                </div>
-                <!-- سؤال 4 -->
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-lg mb-2 text-emerald-700">
-                        <span class="lang-en">How to pray Salah?</span>
-                        <span class="lang-ar">كيف أصلي؟</span>
-                    </h3>
-                    <p class="text-gray-600">
-                        <span class="lang-en">Salah consists of specific postures (standing, bowing, prostrating) and recitations.</span>
-                        <span class="lang-ar">تتكون الصلاة من حركات معينة (قيام، ركوع، سجود) مع قراءة القرآن والأذكار في كل وضعية.</span>
-                    </p>
-                </div>
+                
+                <!-- أضف المزيد من الأسئلة بنفس الطريقة -->
             </div>
         </div>
-    </div>
+    </section>
 
     <script>
         function toggleLanguage() {
-            const htmlTag = document.getElementById('html-tag');
-            htmlTag.dir = htmlTag.dir === 'ltr' ? 'rtl' : 'ltr';
-            htmlTag.lang = htmlTag.lang === 'en' ? 'ar' : 'en';
+            const html = document.getElementById('html-tag');
+            const currentDir = html.getAttribute('dir');
+            
+            if (currentDir === 'rtl') {
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', 'en');
+            } else {
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+            }
         }
+
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            const icon = document.getElementById('theme-icon');
+            
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                icon.textContent = '🌙';
+            } else {
+                body.classList.add('dark');
+                icon.textContent = '☀️';
+            }
+        }
+
+        // Keyboard shortcut for language toggle
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'l') {
+                e.preventDefault();
+                toggleLanguage();
+            }
+        });
     </script>
 </body>
 </html>
